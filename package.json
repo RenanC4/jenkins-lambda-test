@@ -1,0 +1,33 @@
+{
+  "name": "simpple_notification_serverless",
+  "version": "1.0.0",
+  "description": "Serveless Topic",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src/** --ext .js --ignore-pattern src/key/*.pem",
+    "test": "jasmine",
+    "cover": "nyc --reporter=lcov --reporter=html jasmine",
+    "start": "node ./src/topicNotification/handler/receiveNotification/index.js",
+    "dev": "node -r dotenv/config src/handler/receiveNotification/index.js dotenv_config_path=./env/local.env"
+  },
+  "author": "Renan Lindão",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.503.0",
+    "dotenv": "^8.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-google": "^0.13.0",
+    "eslint-config-prettier": "^6.0.0",
+    "jasmine": "^3.4.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "nyc": "^14.1.1",
+    "prettier": "^1.18.2",
+    "serverless": "^2.3.0"
+  },
+  "files": [
+    "src/**/*"
+  ],
+  "dependencies": {
+    "ajv": "^6.10.2"
+  }
+}
